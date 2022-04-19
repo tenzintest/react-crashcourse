@@ -4,6 +4,8 @@
     justify-content: center;
 }
 
-.navbar li {
+.navbar>li {
     padding: 15px;
+    list-style-type: none;
+    text-decoration: none;
 }

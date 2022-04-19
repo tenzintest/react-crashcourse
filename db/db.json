@@ -1,0 +1,69 @@
+{
+    "Village": [{
+            "id": 0,
+            "name": "A Village",
+            "description": " A Village hills"
+        },
+        {
+            "id": 1,
+            "name": "B Village",
+            "description": "B Village hills"
+        },
+        {
+            "id": 2,
+            "name": "C Village",
+            "description": "C Village hills"
+        },
+        {
+            "id": 3,
+            "name": "D Village",
+            "description": "D Village hills"
+        }
+    ],
+
+    "City": [{
+            "id": 0,
+            "name": "Paris",
+            "description": "Paris , c'est l'amour"
+        },
+        {
+            "id": 1,
+            "name": "Bern",
+            "description": "Bern soo nice"
+        },
+        {
+            "id": 2,
+            "name": "Tokoyo",
+            "description": "Tokoyo so advance city"
+        },
+        {
+            "id": 3,
+            "name": "Soeul",
+            "description": "Soeul K-pop"
+        }
+    ],
+
+
+
+    "Country": [{
+            "id": 0,
+            "name": "France",
+            "description": "Paris , c'est l'amour"
+        },
+        {
+            "id": 1,
+            "name": "Swiss",
+            "description": "Bern soo nice"
+        },
+        {
+            "id": 2,
+            "name": "Japan",
+            "description": "Tokoyo so advance city"
+        },
+        {
+            "id": 3,
+            "name": "South Korea",
+            "description": "Soeul K-pop"
+        }
+    ]
+}
