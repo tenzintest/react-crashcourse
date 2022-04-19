@@ -7,17 +7,17 @@ const Navbar = () => {
     <div>
         <ul className='navbar'>
             <li>
-                <Link to="/city">
+                <Link to="/city" style={{ textDecoration: 'none'}}>
                     City
                 </Link>
             </li>
             <li>
-                <Link to="/country">
+                <Link to="/country" style={{ textDecoration: 'none'}}>
                     Country
                 </Link>
             </li>
             <li>
-                <Link to="/village">
+                <Link to="/village" style={{ textDecoration: 'none'}}>
                     Village
                 </Link>
             </li>
