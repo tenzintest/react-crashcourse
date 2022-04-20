@@ -3,11 +3,14 @@ import City from './Components/City';
 import Village from './Components/Village';
 import Country from './Components/Country';
 import Navbar from './Components/Navbar';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Routes } from 'react-router-dom';
 import React, { useState, useEffect } from "react";
+import ErrorPage from './Components/ErrorPage';
+import CityDetail from './Components/CityDetail';
+import Weather from './Components/Weather';
 
 
-const App = () => {
+const App = () => { 
 
     const data = [
         {
@@ -41,12 +44,18 @@ const App = () => {
         Router >
         <
         Navbar / >
+        <Routes>
 
         <
-        Routes >
-        <
         Route exact path = "/city"
-        element = { < City name = "Paris" /
+        element = { < City names={data}/
+            >  
+        }
+        / >
+
+        <
+        Route exact path = "/city/:name"
+        element = { <CityDetail names={data} /
             >
         }
         / >
@@ -60,15 +69,14 @@ const App = () => {
         Route exact path = "/country"
         element = { < Country / > }
         />
-
+        <Route path="*" element={<ErrorPage />} />
+        
+        <Route exact path="/weather" 
+            element={ <Weather/>}
+        />        
         <
         /Routes>
-
-        <
-        Village / >
-
-        <
-        /Router>
+        </Router>
     );
 }
 

@@ -21,6 +21,11 @@ const Navbar = () => {
                     Village
                 </Link>
             </li>
+            <li>
+                <Link to="/weather" style={{ textDecoration: 'none'}}>
+                    Weather
+                </Link>
+            </li>
         </ul>
     </div>
   )
