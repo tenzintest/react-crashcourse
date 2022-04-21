@@ -26,6 +26,11 @@ const Navbar = () => {
                     Weather
                 </Link>
             </li>
+            <li>
+                <Link to="/signup" style={{ textDecoration: 'none'}}>
+                    Sign Up
+                </Link>
+            </li>
         </ul>
     </div>
   )
