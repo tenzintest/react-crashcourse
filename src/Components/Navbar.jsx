@@ -27,6 +27,11 @@ const Navbar = () => {
                 </Link>
             </li>
             <li>
+                <Link to="/pic" style={{ textDecoration: 'none'}}>
+                    Pic
+                </Link>
+            </li>
+            <li>
                 <Link to="/signup" style={{ textDecoration: 'none'}}>
                     Sign Up
                 </Link>

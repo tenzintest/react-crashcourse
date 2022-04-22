@@ -96,6 +96,7 @@ const Weather = () => {
                 <Title2>{weatherData.name}</Title2>
                 <SubTit>{Math.round(weatherData.main.temp)} C/F</SubTit>
                 <SubTitS>{weatherData.weather[0].main}</SubTitS>
+                <SubTitS>{weatherData.weather[0].description}</SubTitS>
         </Card>
 
         {/* {typeof weatherData.main === undefined ? (

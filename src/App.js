@@ -11,6 +11,7 @@ import Weather from './Components/Weather';
 import Signup from './Components/Signup';
 import { Container } from 'react-bootstrap';
 import VillageDetail from './Components/VillageDetail';
+import Photo from './Components/Photo';
 
 const App = () => { 
 
@@ -129,6 +130,10 @@ const App = () => {
         element = { < Country / > }
         />
         <Route path="*" element={<ErrorPage />} />
+
+        <Route exact path="/pic" 
+            element={ <Photo/>}
+        /> 
         
         <Route exact path="/weather" 
             element={ <Weather/>}

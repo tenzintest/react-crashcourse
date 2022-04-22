@@ -8,7 +8,7 @@ function ErrorPage() {
     <div>
 
     <p>You clicked {count} times</p>
-      <button onClick={() => setCount(count + 1)}>
+      <button onClick={() => setCount(count * 12)}>
         Click me
       </button>
       <button onClick={() => setCount(count - 1)}>
