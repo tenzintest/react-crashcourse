@@ -12,36 +12,31 @@ import Signup from './Components/Signup';
 import { Container } from 'react-bootstrap';
 import VillageDetail from './Components/VillageDetail';
 import Photo from './Components/Photo';
+import MovieList from './Components/MovieList';
+import Users from './Components/Users';
+import Crud from './Components/Crud';
+import { collection, getDocs } from "firebase/firestore";
+import {db} from './firebase-config';
+
 
 const App = () => { 
 
-    const data = [
-        {
-        "id": 0,
-        "name": "Paris",
-        "description": "Paris , c'est l'amour",
-        "image": "https://images.unsplash.com/photo-1522093007474-d86e9bf7ba6f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGFyaXN8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60"
-    },
-    {
-        "id": 1,
-        "name": "Bern",
-        "description": "Bern soo nice",
-        "image": "https://images.unsplash.com/photo-1597947967084-339b2116a030?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80"
-    },
-    {
-        "id": 2,
-        "name": "Tokyo",
-        "description": "Tokoyo so advance city",
-        "image": "https://images.unsplash.com/photo-1573455494060-c5595004fb6c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=840&q=80"
-    },
-    {
-        "id": 3,
-        "name": "Soeul",
-        "description": "Soeul K-pop",
-        "image": "https://images.unsplash.com/photo-1554310603-d39d43033735?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
-    },
-    
-    ];
+    const [city, setCity] = useState([]);
+    const userCollectionRef = collection(db, "city");
+  
+  
+    useEffect(() => {
+      const getCity = async () => {
+        const data = await getDocs(userCollectionRef);
+        setCity(data.docs.map((doc) => ({...doc.data(), id: doc.id})));
+      };
+  
+      getCity();
+    },[])
+  
+    console.log(city);
+
+ 
 
     const village = [
         {
@@ -94,7 +89,7 @@ const App = () => {
     },
     
     ];
-    
+
     return ( 
         <
         Router >
@@ -104,14 +99,14 @@ const App = () => {
 
         <
         Route exact path = "/city"
-        element = { < City names={data}/
+        element = { < City names={city}/
             >  
         }
         / >
 
         <
         Route exact path = "/city/:name"
-        element = { <CityDetail names={data} /
+        element = { <CityDetail names={city} /
             >
         }
         / >
@@ -134,13 +129,21 @@ const App = () => {
         <Route exact path="/pic" 
             element={ <Photo/>}
         /> 
-        
-        <Route exact path="/weather" 
-            element={ <Weather/>}
-        /> 
+
+        <Route exact path="/movie" element={ <MovieList/>}
+        />
+
+        <Route exact path="/users" element={ <Users/>}
+        />
+
+        <Route exact path="/crud" elemet={ <Crud/> } 
+        />
+
         <Route exact path="/signup" 
         element={ <Signup/>}
     /> 
+
+        
         <
         /Routes>
         </Router>
