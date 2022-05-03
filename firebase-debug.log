@@ -1,0 +1,63 @@
+[debug] [2022-05-03T20:21:36.520Z] ----------------------------------------------------------------------
+[debug] [2022-05-03T20:21:36.523Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\MM\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2022-05-03T20:21:36.523Z] CLI Version:   10.7.2
+[debug] [2022-05-03T20:21:36.523Z] Platform:      win32
+[debug] [2022-05-03T20:21:36.523Z] Node Version:  v16.13.2
+[debug] [2022-05-03T20:21:36.524Z] Time:          Tue May 03 2022 22:21:36 GMT+0200 (Central European Summer Time)
+[debug] [2022-05-03T20:21:36.525Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-05-03T20:21:36.534Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-05-03T20:21:36.535Z] > authorizing via signed-in user (tenzintest3@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\MM\OneDrive\Desktop\Project\enkun\frontend-stack\react-projects\hello
+
+[debug] [2022-05-03T20:22:33.296Z] ----------------------------------------------------------------------
+[debug] [2022-05-03T20:22:33.298Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\MM\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2022-05-03T20:22:33.299Z] CLI Version:   10.7.2
+[debug] [2022-05-03T20:22:33.299Z] Platform:      win32
+[debug] [2022-05-03T20:22:33.299Z] Node Version:  v16.13.2
+[debug] [2022-05-03T20:22:33.300Z] Time:          Tue May 03 2022 22:22:33 GMT+0200 (Central European Summer Time)
+[debug] [2022-05-03T20:22:33.300Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-05-03T20:22:33.311Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-05-03T20:22:33.311Z] > authorizing via signed-in user (tenzintest3@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\MM\OneDrive\Desktop\Project\enkun\frontend-stack\react-projects\hello
+
+[debug] [2022-05-03T20:24:20.243Z] ----------------------------------------------------------------------
+[debug] [2022-05-03T20:24:20.244Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\MM\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2022-05-03T20:24:20.244Z] CLI Version:   10.7.2
+[debug] [2022-05-03T20:24:20.244Z] Platform:      win32
+[debug] [2022-05-03T20:24:20.244Z] Node Version:  v16.13.2
+[debug] [2022-05-03T20:24:20.245Z] Time:          Tue May 03 2022 22:24:20 GMT+0200 (Central European Summer Time)
+[debug] [2022-05-03T20:24:20.245Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-05-03T20:24:20.252Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-05-03T20:24:20.253Z] > authorizing via signed-in user (tenzintest3@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\MM\OneDrive\Desktop\Project\enkun\frontend-stack\react-projects\hello
+

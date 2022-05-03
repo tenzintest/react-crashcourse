@@ -1,7 +1,9 @@
 import React from 'react'
 import '../styles/City.css';
 import styled from 'styled-components';
+import { Form, Button, Card, Alert } from 'react-bootstrap';
 import { Switch, Route, Link } from 'react-router-dom';
+import { useUserAuth } from '../context/UserAuthContext';
 
 const Image = styled.img `
     margin: 12px;
@@ -33,11 +35,28 @@ const Description = styled.p `
   color: #C70039;
 `;
 
-const City = ({ names }) => {
+const City = ({ names, click }) => {
+    const { user, LogOut } = useUserAuth();
+    console.log(user);
+    const handleLogOut = async() => {
+        try {
+            await LogOut();
+        } catch (err) {
+            console.log(err.message);
+        }
+    }
     return ( <
-        >
-        <
-        Wrapper > {
+            >
+
+
+            <
+            Wrapper > { user && user.email }
+
+            <
+            Button variant = "primary"
+            onClick = { handleLogOut } >
+            Log Out <
+            /Button> {
             names.map((da) => ( <
                 div key = { da.id } >
                 <
@@ -53,7 +72,7 @@ const City = ({ names }) => {
             ))
         } <
         /Wrapper> < / >
-    )
+)
 }
 
 export default City

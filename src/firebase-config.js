@@ -2,21 +2,8 @@
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { getFirestore } from "firebase/firestore";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-// const firebaseConfig = {
-//   apiKey: "AIzaSyDVRmwWhK9inxdO1bjrmh_uHT8KKE2tYLc",
-//   authDomain: "demotest-a616d.firebaseapp.com",
-//   projectId: "demotest-a616d",
-//   storageBucket: "demotest-a616d.appspot.com",
-//   messagingSenderId: "269426678206",
-//   appId: "1:269426678206:web:f7f481e525628ee62941ef",
-//   measurementId: "G-43KKLCM4JC"
-// };
-
+import { getStorage } from "firebase/storage";
+import { getAuth, GoogleAuthProvider, signInWithPopup, signOut } from "firebase/auth"
 
 const firebaseConfig = {
   apiKey: "AIzaSyBeoQRRi6M4njl6LSPu5xUiADzuyYTKuOk",
@@ -31,7 +18,35 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
+export const auth = getAuth(app);
 
 
 // to connect db to react
 export const db = getFirestore(app);
+export const storage = getStorage(app);
+const provider = new GoogleAuthProvider()
+
+
+export const signInWithGoogle = () => {
+  signInWithPopup(auth, provider)
+    .then((result) => {
+      const name = result.user.displayName
+      const email = result.user.email
+      const profilePic = result.user.photoURL;
+
+      localStorage.setItem("name", name)
+      localStorage.setItem("email", email)
+      localStorage.setItem("profilePic", profilePic)
+  }).catch((error) => {
+    console.log(error);
+  })
+};
+
+
+// export const signOutNow = () => {
+//   signOut(auth).then(() => {
+//     alert("Sign out !!")
+//   }).catch((error) => {
+
+//   })
+// }

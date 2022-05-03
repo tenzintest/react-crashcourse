@@ -15,16 +15,28 @@ import Photo from './Components/Photo';
 import MovieList from './Components/MovieList';
 import Users from './Components/Users';
 import Crud from './Components/Crud';
-import { collection, getDocs } from "firebase/firestore";
+import { collection, getDocs, updateDoc, deleteDoc, addDoc, doc } from "firebase/firestore";
 import {db} from './firebase-config';
-
+import Login from './Components/Login';
+import { UserAuthContextProvider, userAuthContextProvider } from './context/UserAuthContext';
 
 const App = () => { 
 
+    const [newName, setName] = useState("");
+    const [newDescription, setDescription] = useState("");
+    const [newImage, setImage ] = useState("");
+
+
     const [city, setCity] = useState([]);
     const userCollectionRef = collection(db, "city");
+
+
   
   
+    const createUser = async () => {
+      await addDoc(userCollectionRef, {name: newName, description: newDescription, image: newImage });
+    };
+
     useEffect(() => {
       const getCity = async () => {
         const data = await getDocs(userCollectionRef);
@@ -34,7 +46,9 @@ const App = () => {
       getCity();
     },[])
   
-    console.log(city);
+
+   
+
 
  
 
@@ -95,10 +109,11 @@ const App = () => {
         Router >
         <
         Navbar / >
+        <UserAuthContextProvider>
         <Routes>
 
         <
-        Route exact path = "/city"
+        Route exact path = "/"
         element = { < City names={city}/
             >  
         }
@@ -138,6 +153,8 @@ const App = () => {
 
         <Route exact path="/crud" elemet={ <Crud/> } 
         />
+        
+        <Route exact path="/login" element={ <Login />}/>
 
         <Route exact path="/signup" 
         element={ <Signup/>}
@@ -146,6 +163,8 @@ const App = () => {
         
         <
         /Routes>
+        </UserAuthContextProvider>
+       
         </Router>
     );
 }

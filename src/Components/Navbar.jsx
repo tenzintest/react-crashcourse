@@ -1,6 +1,8 @@
 import React from 'react';
 import '../styles/Navbar.css';
 import { Link } from 'react-router-dom';
+import { signInWithGoogle } from '../firebase-config';
+import { signOutNow } from '../firebase-config';
 
 const Navbar = () => {
     return ( <
@@ -10,7 +12,7 @@ const Navbar = () => {
         <
         li >
         <
-        Link to = "/city"
+        Link to = "/"
         style = {
             { textDecoration: 'none' }
         } >
@@ -70,16 +72,28 @@ const Navbar = () => {
         } >
         CRUD <
         /Link> < /
-        li > <
+        li >
+        <
+        li >
+        <
+        Link to = "/login"
+        style = {
+            { textDecoration: 'none' }
+        } >
+        Sign In <
+        /Link> < /
+        li >
+        <
         li >
         <
         Link to = "/signup"
         style = {
             { textDecoration: 'none' }
         } >
-        Sign Up <
+        Sign up <
         /Link> < /
-        li > <
+        li >
+        <
         /ul> < /
         div >
     )
